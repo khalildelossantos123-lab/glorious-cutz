@@ -6,94 +6,109 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
       background: #0f0f0f;
       color: #ffffff;
-      line-height: 1.6;
     }
 
-    header {
-      background: linear-gradient(to right, #000000, #1a1a1a);
-      padding: 80px 20px;
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      background: linear-gradient(180deg, #000000, #1a1a1a);
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
+      padding: 20px;
     }
 
-    header h1 {
+    .hero h1 {
       font-size: 3rem;
-      letter-spacing: 3px;
+      letter-spacing: 4px;
       margin-bottom: 10px;
     }
 
-    header p {
-      font-size: 1.1rem;
+    .hero p {
       opacity: 0.85;
+      margin-bottom: 25px;
     }
 
     .btn {
-      display: inline-block;
-      margin-top: 25px;
       padding: 12px 28px;
-      border: 2px solid #ffffff;
-      color: #ffffff;
+      border: 2px solid #fff;
+      color: #fff;
       text-decoration: none;
       font-weight: bold;
     }
 
     .btn:hover {
-      background: #ffffff;
-      color: #000000;
+      background: #fff;
+      color: #000;
     }
 
+    /* SECTIONS */
     section {
       padding: 70px 20px;
-      text-align: center;
+      max-width: 1100px;
+      margin: auto;
     }
 
     h2 {
+      text-align: center;
       font-size: 2.2rem;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
     }
 
-    .divider {
+    .line {
       width: 60px;
       height: 3px;
-      background: #ffffff;
-      margin: 20px auto 40px;
+      background: #fff;
+      margin: 0 auto 40px;
     }
 
     .about {
-      max-width: 700px;
+      text-align: center;
+      max-width: 750px;
       margin: auto;
-      font-size: 1.05rem;
       opacity: 0.9;
     }
 
+    /* SERVICES */
     .services {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-      max-width: 900px;
-      margin: auto;
+      gap: 25px;
     }
 
-    .service {
+    .service-box {
       background: #1a1a1a;
       padding: 30px;
-      border-radius: 8px;
+      border-radius: 12px;
+      text-align: center;
+      transition: transform 0.3s ease;
     }
 
+    .service-box:hover {
+      transform: translateY(-6px);
+    }
+
+    /* FOOTER */
     footer {
-      background: #000000;
-      padding: 30px;
+      background: #000;
       text-align: center;
+      padding: 30px;
       font-size: 0.9rem;
       opacity: 0.7;
     }
 
     @media (max-width: 600px) {
-      header h1 {
+      .hero h1 {
         font-size: 2.3rem;
       }
     }
@@ -103,44 +118,46 @@
 <body>
 
   <!-- HERO -->
-  <header>
-    <h1>GLORIOUS CUTZ</h1>
-    <p>Est. 2024 · Clean Cuts · Fresh Style</p>
-    <a class="btn" href="https://m.me/GloriousCutz" target="_blank">
-      Book via Messenger
-    </a>
-  </header>
+  <div class="hero">
+    <div>
+      <h1>GLORIOUS CUTZ</h1>
+      <p>Est. 2024 · Clean Cuts · Fresh Style</p>
+      <a class="btn" href="https://m.me/GloriousCutz" target="_blank">
+        Book via Messenger
+      </a>
+    </div>
+  </div>
 
   <!-- ABOUT -->
   <section>
     <h2>About Us</h2>
-    <div class="divider"></div>
+    <div class="line"></div>
     <p class="about">
       Glorious Cutz is a local barber shop dedicated to delivering clean,
-      fresh, and quality haircuts. We focus on precision, style, and customer
-      satisfaction — every cut matters.
+      fresh, and quality haircuts. Precision, style, and customer satisfaction
+      — every cut matters.
     </p>
   </section>
 
   <!-- SERVICES -->
   <section>
     <h2>Services</h2>
-    <div class="divider"></div>
+    <div class="line"></div>
 
     <div class="services">
-      <div class="service">
+      <div class="service-box">
         <h3>Haircut</h3>
         <p>Clean and classic cuts for all styles</p>
       </div>
 
-      <div class="service">
+      <div class="service-box">
         <h3>Fade</h3>
         <p>Sharp fades with smooth blending</p>
       </div>
 
-      <div class="service">
+      <div class="service-box">
         <h3>Beard Trim</h3>
-        <p>Neat and detailed beard grooming</p>
+        <p>Neat and detailed grooming</p>
       </div>
     </div>
   </section>
