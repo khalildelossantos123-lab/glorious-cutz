@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Glorious Cutz Barber Shop</title>
+  <title>Glorious Cutz</title>
 
   <style>
     * {
@@ -14,26 +14,35 @@
     }
 
     body {
-      background: #0b0b0b;
+      background: #0e0e0e;
       color: #ffffff;
-      line-height: 1.6;
     }
 
-    /* ===== HEADER ===== */
-    header {
-      padding: 90px 20px;
+    /* ===== HERO ===== */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
-      background: linear-gradient(180deg, #000000, #121212);
+      padding: 40px 20px;
     }
 
-    header h1 {
+    .hero h1 {
       font-size: 42px;
       letter-spacing: 4px;
+      animation: floatText 3s ease-in-out infinite;
     }
 
-    header p {
-      margin-top: 10px;
-      opacity: 0.85;
+    .hero p {
+      margin-top: 12px;
+      opacity: 0.9;
+    }
+
+    @keyframes floatText {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+      100% { transform: translateY(0); }
     }
 
     /* ===== SECTIONS ===== */
@@ -86,7 +95,7 @@
 
     .service-box:hover {
       transform: translateY(-8px);
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.7);
     }
 
     /* ===== GALLERY ===== */
@@ -106,7 +115,7 @@
 
     .gallery img:hover {
       transform: scale(1.08);
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.8);
     }
 
     /* ===== CONTACT ===== */
@@ -118,30 +127,24 @@
     }
 
     .contact p {
-      margin-bottom: 15px;
+      margin-bottom: 12px;
+      opacity: 0.95;
     }
 
     .btn {
       display: inline-block;
-      padding: 14px 30px;
+      margin-top: 15px;
+      padding: 12px 28px;
+      border-radius: 30px;
       background: #ffffff;
       color: #000000;
-      border-radius: 40px;
       text-decoration: none;
       font-weight: bold;
-      transition: transform 0.3s ease, background 0.3s ease;
     }
 
-    .btn:hover {
-      transform: scale(1.08);
-      background: #e0e0e0;
-    }
-
-    /* ===== FOOTER ===== */
     footer {
       text-align: center;
       padding: 25px;
-      background: #000000;
       font-size: 14px;
       opacity: 0.7;
     }
@@ -150,20 +153,22 @@
 
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <h1>GLORIOUS CUTZ</h1>
-    <p>Est. 2024</p>
-    <p>Willingness to serve good cuts and fresh style</p>
-  </header>
+  <!-- HERO -->
+  <div class="hero">
+    <div>
+      <h1>GLORIOUS CUTZ</h1>
+      <p>Est. 2024</p>
+      <p>Willingness to serve good cuts and fresh style</p>
+    </div>
+  </div>
 
   <!-- ABOUT -->
   <section class="about">
     <h2>About Us</h2>
     <p>
-      Glorious Cutz is a local barber shop dedicated to delivering clean, fresh,
-      and quality haircuts. We focus on precision, style, and customer
-      satisfaction — every cut matters.
+      Glorious Cutz is a local barber shop dedicated to delivering clean,
+      fresh, and quality haircuts. We focus on precision, style, and
+      customer satisfaction — every cut matters.
     </p>
   </section>
 
@@ -177,11 +182,11 @@
       </div>
       <div class="service-box">
         <h3>Fade</h3>
-        <p>Sharp fades and modern looks</p>
+        <p>Sharp and smooth fade styles</p>
       </div>
       <div class="service-box">
         <h3>Beard Trim</h3>
-        <p>Neat and detailed beard shaping</p>
+        <p>Neat beard shaping and grooming</p>
       </div>
     </div>
   </section>
@@ -198,33 +203,24 @@
     </div>
   </section>
 
-  <!-- CONTACT / ADDRESS -->
+  <!-- CONTACT -->
   <section class="contact">
-    <h2>Visit Us</h2>
+    <h2>Contact & Location</h2>
 
-    <p><strong>📍 Address</strong></p>
     <p>
-      Glorious Cutz Barber Shop<br>
-      Barangay ____________, City ____________<br>
-      Philippines
+      📍 B40 L16 P3, Villa De Calamba,<br>
+      Calamba City, Laguna, Philippines 4027
     </p>
 
-    <p><strong>🕒 Business Hours</strong></p>
-    <p>
-      Monday – Sunday<br>
-      10:00 AM – 9:00 PM
-    </p>
+    <p>📧 gimorodale@gmail.com</p>
 
-    <a
-      class="btn"
-      href="https://m.facebook.com/profile.php?id=61563975598992"
-      target="_blank"
-    >
+    <a class="btn"
+       href="https://m.facebook.com/profile.php?id=61563975598992"
+       target="_blank">
       Book via Messenger
     </a>
   </section>
 
-  <!-- FOOTER -->
   <footer>
     © 2024 Glorious Cutz Barber Shop · All Rights Reserved
   </footer>
