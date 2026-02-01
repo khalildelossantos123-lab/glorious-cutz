@@ -1,71 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Glorious Cutz Barber Shop</title>
 
   <style>
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
       font-family: Arial, Helvetica, sans-serif;
     }
 
     body {
-      background: radial-gradient(circle at top, #1a1a1a, #050505);
+      background: #0b0b0b;
       color: #ffffff;
       line-height: 1.6;
     }
 
-    /* ===== LOGO HERO ===== */
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    /* ===== HEADER ===== */
+    header {
+      padding: 90px 20px;
       text-align: center;
-      padding: 20px;
+      background: linear-gradient(180deg, #000000, #121212);
     }
 
-    .logo-box {
-      animation: floatIn 1.6s ease;
+    header h1 {
+      font-size: 42px;
+      letter-spacing: 4px;
     }
 
-    .logo {
-      font-size: 52px;
-      letter-spacing: 6px;
-      font-weight: bold;
-      background: linear-gradient(90deg, #ffffff, #bfbfbf, #ffffff);
-      background-size: 200% auto;
-      color: transparent;
-      background-clip: text;
-      -webkit-background-clip: text;
-      animation: shine 4s linear infinite;
-    }
-
-    .tagline {
-      margin-top: 14px;
-      font-size: 16px;
-      opacity: 0.9;
-    }
-
-    @keyframes shine {
-      to {
-        background-position: 200% center;
-      }
-    }
-
-    @keyframes floatIn {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    header p {
+      margin-top: 10px;
+      opacity: 0.85;
     }
 
     /* ===== SECTIONS ===== */
@@ -79,6 +47,7 @@
       text-align: center;
       font-size: 30px;
       margin-bottom: 40px;
+      position: relative;
     }
 
     h2::after {
@@ -117,14 +86,14 @@
 
     .service-box:hover {
       transform: translateY(-8px);
-      box-shadow: 0 15px 40px rgba(0,0,0,0.7);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
     }
 
     /* ===== GALLERY ===== */
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 18px;
+      gap: 15px;
     }
 
     .gallery img {
@@ -137,7 +106,7 @@
 
     .gallery img:hover {
       transform: scale(1.08);
-      box-shadow: 0 15px 40px rgba(0,0,0,0.8);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8);
     }
 
     /* ===== CONTACT ===== */
@@ -154,25 +123,25 @@
 
     .btn {
       display: inline-block;
-      margin-top: 10px;
-      padding: 12px 26px;
+      padding: 14px 30px;
       background: #ffffff;
       color: #000000;
+      border-radius: 40px;
       text-decoration: none;
-      border-radius: 30px;
       font-weight: bold;
       transition: transform 0.3s ease, background 0.3s ease;
     }
 
     .btn:hover {
-      transform: scale(1.05);
-      background: #e5e5e5;
+      transform: scale(1.08);
+      background: #e0e0e0;
     }
 
     /* ===== FOOTER ===== */
     footer {
       text-align: center;
-      padding: 20px;
+      padding: 25px;
+      background: #000000;
       font-size: 14px;
       opacity: 0.7;
     }
@@ -181,22 +150,24 @@
 
 <body>
 
-  <div class="hero">
-    <div class="logo-box">
-      <div class="logo">GLORIOUS CUTZ</div>
-      <p class="tagline">Est. 2024 · Good Cuts · Fresh Style</p>
-    </div>
-  </div>
+  <!-- HEADER -->
+  <header>
+    <h1>GLORIOUS CUTZ</h1>
+    <p>Est. 2024</p>
+    <p>Willingness to serve good cuts and fresh style</p>
+  </header>
 
+  <!-- ABOUT -->
   <section class="about">
     <h2>About Us</h2>
     <p>
-      Glorious Cutz is a local barber shop dedicated to delivering clean,
-      fresh, and quality haircuts. We focus on precision, style, and customer
+      Glorious Cutz is a local barber shop dedicated to delivering clean, fresh,
+      and quality haircuts. We focus on precision, style, and customer
       satisfaction — every cut matters.
     </p>
   </section>
 
+  <!-- SERVICES -->
   <section>
     <h2>Services</h2>
     <div class="services">
@@ -206,15 +177,16 @@
       </div>
       <div class="service-box">
         <h3>Fade</h3>
-        <p>Sharp fades with smooth blending</p>
+        <p>Sharp fades and modern looks</p>
       </div>
       <div class="service-box">
         <h3>Beard Trim</h3>
-        <p>Neat and well-shaped beard grooming</p>
+        <p>Neat and detailed beard shaping</p>
       </div>
     </div>
   </section>
 
+  <!-- GALLERY -->
   <section>
     <h2>Gallery</h2>
     <div class="gallery">
@@ -226,9 +198,23 @@
     </div>
   </section>
 
+  <!-- CONTACT / ADDRESS -->
   <section class="contact">
-    <h2>Book an Appointment</h2>
-    <p>Message us on Facebook to book your next cut</p>
+    <h2>Visit Us</h2>
+
+    <p><strong>📍 Address</strong></p>
+    <p>
+      Glorious Cutz Barber Shop<br>
+      Barangay ____________, City ____________<br>
+      Philippines
+    </p>
+
+    <p><strong>🕒 Business Hours</strong></p>
+    <p>
+      Monday – Sunday<br>
+      10:00 AM – 9:00 PM
+    </p>
+
     <a
       class="btn"
       href="https://m.facebook.com/profile.php?id=61563975598992"
@@ -238,6 +224,7 @@
     </a>
   </section>
 
+  <!-- FOOTER -->
   <footer>
     © 2024 Glorious Cutz Barber Shop · All Rights Reserved
   </footer>
