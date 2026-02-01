@@ -1,40 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Glorious Cutz | Barber Shop</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Glorious Cutz | Barber Shop</title>
 
 <style>
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', Helvetica, sans-serif;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-  body {
-    background:
-      radial-gradient(circle at top, #1a1a1a 0%, #0a0a0a 60%, #000000 100%);
-    color: #ffffff;
-    line-height: 1.6;
-  }
+/* ===== MOVING BACKGROUND ===== */
+body {
+  background: linear-gradient(120deg, #000000, #1a1a1a, #000000);
+  background-size: 400% 400%;
+  animation: bgMove 18s ease infinite;
+  color: #ffffff;
+  line-height: 1.6;
+}
 
-  header {
-    text-align: center;
-    padding: 80px 20px;
-    background:
-      linear-gradient(
-        180deg,
-        rgba(0,0,0,0.9),
-        rgba(15,15,15,0.95)
-      );
-    border-bottom: 1px solid #222;
-  }
+@keyframes bgMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
 
-  header h1 {
-    font-size: 44px;
-    letter-spacing: 3px;
+/* ===== HERO ===== */
+.hero {
+  position: relative;
+  height: 80vh;
+  background: url("images/hero.jpg") center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 46px;
+  letter-spacing: 4px;
+}
+
+.hero p {
+  margin-top: 10px;
+  opacity: 0.9;
+}
+
+/* ===== SECTIONS ===== */
+section {
+  padding: 70px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+h2 {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+h2::after {
+  content: "";
+  width: 70px;
+  height: 3px;
+  background: #ffffff;
+  display: block;
+  margin: 12px auto 0;
+}
+
+/* ===== ABOUT ===== */
+.about p {
+  text-align: center;
+  max-width: 750px;
+  margin: auto;
+  font-size: 16px;
+  opacity: 0.95;
+}
+
+/* ===== SERVICES ===== */
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.service-box {
+  background: linear-gradient(180deg, #1c1c1c, #111111);
+  padding: 30px 20px;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid #2a2a2a;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.7);
+}
+
+/* ===== GALLERY ===== */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 14px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.8);
+}
+
+/* ===== CONTACT ===== */
+.contact {
+  text-align: center;
+  background: linear-gradient(180deg, #0d0d0d, #050505);
+  border-top: 1px solid #222;
+  border-bottom: 1px solid #222;
+}
+
+.contact p {
+  margin-bottom: 15px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 15px 38px;
+  background: #ffffff;
+  color: #000000;
+  text-decoration:    letter-spacing: 3px;
     margin-bottom: 10px;
   }
 
@@ -202,5 +319,6 @@
 
 </body>
 </html>
+
 
 
