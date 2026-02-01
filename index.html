@@ -1,50 +1,175 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Glorious Cutz | Barber Shop - Calamba</title>
-  <meta name="description" content="Glorious Cutz Barber Shop in Calamba City. Fresh cuts, clean fades, and quality service." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Glorious Cutz | Barber Shop</title>
+
   <style>
-    body { margin:0; font-family: Arial, Helvetica, sans-serif; background:#000; color:#fff; }
-    a { color:#fff; text-decoration:none; }
-    header { padding:60px 20px; text-align:center; }
-    header h1 { font-size:48px; margin:0; letter-spacing:2px; }
-    header p { opacity:0.8; }
-    .btn { display:inline-block; margin-top:20px; padding:12px 24px; border:1px solid #fff; }
-    section { padding:60px 20px; max-width:1000px; margin:auto; }
-    .services { display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap:20px; }
-    .card { border:1px solid #333; padding:20px; }
-    .gallery { display:grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap:10px; }
-    .gallery div { background:#111; height:220px; display:flex; align-items:center; justify-content:center; opacity:0.6; }
-    footer { background:#111; padding:40px 20px; text-align:center; font-size:14px; opacity:0.8; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background-color: #0f0f0f;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(180deg, #000000, #111111);
+    }
+
+    header h1 {
+      font-size: 42px;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 16px;
+      opacity: 0.9;
+    }
+
+    section {
+      padding: 50px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 28px;
+      letter-spacing: 1px;
+    }
+
+    .about p {
+      text-align: center;
+      max-width: 700px;
+      margin: auto;
+      font-size: 16px;
+      opacity: 0.95;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .service-box {
+      background: #1a1a1a;
+      padding: 25px;
+      border-radius: 8px;
+      text-align: center;
+      border: 1px solid #2a2a2a;
+    }
+
+    .service-box h3 {
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+
+    .contact {
+      text-align: center;
+    }
+
+    .contact p {
+      margin-bottom: 15px;
+      font-size: 15px;
+      opacity: 0.95;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 14px 30px;
+      background: #ffffff;
+      color: #000000;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 30px;
+      transition: 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #dddddd;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #000000;
+      font-size: 13px;
+      opacity: 0.7;
+    }
   </style>
 </head>
-<body><header>
-  <p>Est. 2024</p>
-  <h1>GLORIOUS CUTZ</h1>
-  <p>Willingness to serve good cuts and fresh style</p>
-  <a class="btn" href="https://m.me/GloriousCutz" target="_blank">Book via Messenger</a>
-</header><section>
-  <h2>Our Services</h2>
-  <div class="services">
-    <div class="card">Regular Haircut</div>
-    <div class="card">Skin Fade</div>
-    <div class="card">Taper / Burst Fade</div>
-    <div class="card">Beard Trim</div>
-  </div>
-</section><section>
-  <h2>Recent Cuts</h2>
-  <div class="gallery">
-    <div>Photo</div>
-    <div>Photo</div>
-    <div>Photo</div>
-    <div>Photo</div>
-  </div>
-</section><section>
-  <h2>Visit Us</h2>
-  <p>B40 L16 P3, Villa De Calamba, Calamba City, Laguna 4027</p>
-  <p>Email: gimorodale@gmail.com</p>
-</section><footer>
-  <p>© 2026 Glorious Cutz Barber Shop</p>
-</footer></body>
+
+<body>
+
+  <header>
+    <h1>GLORIOUS CUTZ</h1>
+    <p>Est. 2024</p>
+    <p>Willingness to serve good cuts and fresh style</p>
+  </header>
+
+  <section class="about">
+    <h2>About Us</h2>
+    <p>
+      Glorious Cutz is a local barber shop dedicated to delivering clean,
+      fresh, and quality haircuts. We focus on precision, style, and customer
+      satisfaction — every cut matters.
+    </p>
+  </section>
+
+  <section>
+    <h2>Services</h2>
+    <div class="services">
+      <div class="service-box">
+        <h3>Haircut</h3>
+        <p>Clean and classic cuts for all styles</p>
+      </div>
+      <div class="service-box">
+        <h3>Fade / Taper</h3>
+        <p>Sharp fades and smooth tapers</p>
+      </div>
+      <div class="service-box">
+        <h3>Beard Trim</h3>
+        <p>Neat and clean beard shaping</p>
+      </div>
+      <div class="service-box">
+        <h3>Kids Cut</h3>
+        <p>Fresh and comfortable cuts for kids</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact">
+    <h2>Visit & Contact</h2>
+    <p>
+      📍 B40 L16 P3, Villa De Calamba<br/>
+      Near City Hall, Calamba City<br/>
+      Laguna, Philippines 4027
+    </p>
+
+    <p>📧 gimorodale@gmail.com</p>
+
+    <a class="btn" href="https://www.facebook.com/GloriousCutz" target="_blank">
+      Message on Facebook
+    </a>
+  </section>
+
+  <footer>
+    © 2024 Glorious Cutz Barber Shop
+  </footer>
+
+</body>
 </html>
