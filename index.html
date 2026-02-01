@@ -1,40 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Glorious Cutz | Barber Shop</title>
+  <meta charset="UTF-8">
+  <title>Glorious Cutz Barber Shop</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
-}
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
 
-/* ===== MOVING BACKGROUND ===== */
-body {
-  background: linear-gradient(120deg, #000000, #1a1a1a, #000000);
-  background-size: 400% 400%;
-  animation: bgMove 18s ease infinite;
-  color: #ffffff;
-  line-height: 1.6;
-}
+    body {
+      background: #0e0e0e;
+      color: #fff;
+      overflow-x: hidden;
+    }
 
-@keyframes bgMove {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
+    /* HERO */
+    .hero {
+      height: 100vh;
+      background:
+        linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+        url('images/hero.jpg') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      animation: zoom 20s infinite alternate;
+    }
 
-/* ===== HERO ===== */
-.hero {
-  position: relative;
-  height: 80vh;
-  background: url("images/hero.jpg") center / cover no-repeat;
-  display: flex;
-  align-items: center;
+    @keyframes zoom {
+      from { background-size: 100%; }
+      to { background-size: 110%; }
+    }
+
+    .hero h1 {
+      font-size: 3.2rem;
+      letter-spacing: 3px;
+    }
+
+    .hero p {
+      margin-top: 10px;
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 12px 30px;
+      border: 2px solid #fff;
+      color: #fff;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #fff;
+      color: #000;
+    }
+
+    section {
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+    }
+
+    .line {
+      width: 60px;
+      height: 3px;
+      background: #fff;
+      margin: 0 auto 30px;
+    }
+
+    /* ABOUT */
+    .about p {
+      max-width: 700px;
+      margin: auto;
+      font-size: 1.05rem;
+      line-height: 1.7;
+      opacity: 0.9;
+    }
+
+    /* SERVICES */
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .service {
+      background: #161616;
+      padding: 30px;
+      border-radius: 8px;
+      transition: transform 0.3s;
+    }
+
+    .service:hover {
+      transform: translateY(-10px);
+    }
+
+    /* GALLERY */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 8px;
+      transition: transform 0.4s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.08);
+    }
+
+    /* FOOTER */
+    footer {
+      background: #000;
+      padding: 40px 20px;
+      text-align: center;
+      font-size: 0.9rem;
+      opacity: 0.7;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2.4rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div>
+      <h1>GLORIOUS CUTZ</h1>
+      <p>Est. 2024 · Clean Cuts · Fresh Style</p>
+      <a class="btn" href="https://m.me/GloriousCutz" target="_blank">Book via Messenger</a>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="about">
+    <h2>About Us</h2>
+    <div class="line"></div>
+    <p>
+      Glorious Cutz is a local barber shop dedicated to delivering clean,
+      fresh, and quality haircuts. We focus on precision, style, and customer
+      satisfaction — every cut matters.
+    </p>
+  </section>
+
+  <!-- SERVICES -->
+  <section>
+    <h2>Services</h2>
+    <div class="line"></div>
+    <div class="services">
+      <div class="service">
+        <h3>Haircut</h3>
+        <p>Clean and classic cuts for all styles</p>
+      </div>
+      <div class="service">
+        <h3>Fade</h3>
+        <p>Sharp fades with smooth blending</p>
+      </div>
+      <div class="service">
+        <h3>Beard Trim</h3>
+        <p>Neat and detailed beard grooming</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section>
+    <h2>Gallery</h2>
+    <div class="line"></div>
+    <div class="gallery">
+      <img src="images/cut1.jpg">
+      <img src="images/cut2.jpg">
+      <img src="images/cut3.jpg">
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2024 Glorious Cutz Barber Shop · All Rights Reserved
+  </footer>
+
+</body>
+</html>  align-items: center;
   justify-content: center;
 }
 
@@ -319,6 +489,7 @@ h2::after {
 
 </body>
 </html>
+
 
 
 
