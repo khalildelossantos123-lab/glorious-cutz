@@ -6,90 +6,70 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', sans-serif;
-    }
-
     body {
-      background: #0e0e0e;
-      color: #fff;
-      overflow-x: hidden;
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0f0f0f;
+      color: #ffffff;
+      line-height: 1.6;
     }
 
-    /* HERO */
-    .hero {
-      height: 100vh;
-      background:
-        linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
-        url('images/hero.jpg') center/cover no-repeat;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    header {
+      background: linear-gradient(to right, #000000, #1a1a1a);
+      padding: 80px 20px;
       text-align: center;
-      animation: zoom 20s infinite alternate;
     }
 
-    @keyframes zoom {
-      from { background-size: 100%; }
-      to { background-size: 110%; }
-    }
-
-    .hero h1 {
-      font-size: 3.2rem;
+    header h1 {
+      font-size: 3rem;
       letter-spacing: 3px;
+      margin-bottom: 10px;
     }
 
-    .hero p {
-      margin-top: 10px;
+    header p {
       font-size: 1.1rem;
-      opacity: 0.9;
+      opacity: 0.85;
     }
 
     .btn {
       display: inline-block;
       margin-top: 25px;
-      padding: 12px 30px;
-      border: 2px solid #fff;
-      color: #fff;
+      padding: 12px 28px;
+      border: 2px solid #ffffff;
+      color: #ffffff;
       text-decoration: none;
-      transition: 0.3s;
+      font-weight: bold;
     }
 
     .btn:hover {
-      background: #fff;
-      color: #000;
+      background: #ffffff;
+      color: #000000;
     }
 
     section {
-      padding: 80px 20px;
+      padding: 70px 20px;
       text-align: center;
     }
 
     h2 {
       font-size: 2.2rem;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
     }
 
-    .line {
+    .divider {
       width: 60px;
       height: 3px;
-      background: #fff;
-      margin: 0 auto 30px;
+      background: #ffffff;
+      margin: 20px auto 40px;
     }
 
-    /* ABOUT */
-    .about p {
+    .about {
       max-width: 700px;
       margin: auto;
       font-size: 1.05rem;
-      line-height: 1.7;
       opacity: 0.9;
     }
 
-    /* SERVICES */
     .services {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -99,47 +79,22 @@
     }
 
     .service {
-      background: #161616;
+      background: #1a1a1a;
       padding: 30px;
       border-radius: 8px;
-      transition: transform 0.3s;
     }
 
-    .service:hover {
-      transform: translateY(-10px);
-    }
-
-    /* GALLERY */
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 15px;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    .gallery img {
-      width: 100%;
-      border-radius: 8px;
-      transition: transform 0.4s;
-    }
-
-    .gallery img:hover {
-      transform: scale(1.08);
-    }
-
-    /* FOOTER */
     footer {
-      background: #000;
-      padding: 40px 20px;
+      background: #000000;
+      padding: 30px;
       text-align: center;
       font-size: 0.9rem;
       opacity: 0.7;
     }
 
     @media (max-width: 600px) {
-      .hero h1 {
-        font-size: 2.4rem;
+      header h1 {
+        font-size: 2.3rem;
       }
     }
   </style>
@@ -148,19 +103,19 @@
 <body>
 
   <!-- HERO -->
-  <div class="hero">
-    <div>
-      <h1>GLORIOUS CUTZ</h1>
-      <p>Est. 2024 · Clean Cuts · Fresh Style</p>
-      <a class="btn" href="https://m.me/GloriousCutz" target="_blank">Book via Messenger</a>
-    </div>
-  </div>
+  <header>
+    <h1>GLORIOUS CUTZ</h1>
+    <p>Est. 2024 · Clean Cuts · Fresh Style</p>
+    <a class="btn" href="https://m.me/GloriousCutz" target="_blank">
+      Book via Messenger
+    </a>
+  </header>
 
   <!-- ABOUT -->
-  <section class="about">
+  <section>
     <h2>About Us</h2>
-    <div class="line"></div>
-    <p>
+    <div class="divider"></div>
+    <p class="about">
       Glorious Cutz is a local barber shop dedicated to delivering clean,
       fresh, and quality haircuts. We focus on precision, style, and customer
       satisfaction — every cut matters.
@@ -170,31 +125,23 @@
   <!-- SERVICES -->
   <section>
     <h2>Services</h2>
-    <div class="line"></div>
+    <div class="divider"></div>
+
     <div class="services">
       <div class="service">
         <h3>Haircut</h3>
         <p>Clean and classic cuts for all styles</p>
       </div>
+
       <div class="service">
         <h3>Fade</h3>
         <p>Sharp fades with smooth blending</p>
       </div>
+
       <div class="service">
         <h3>Beard Trim</h3>
         <p>Neat and detailed beard grooming</p>
       </div>
-    </div>
-  </section>
-
-  <!-- GALLERY -->
-  <section>
-    <h2>Gallery</h2>
-    <div class="line"></div>
-    <div class="gallery">
-      <img src="images/cut1.jpg">
-      <img src="images/cut2.jpg">
-      <img src="images/cut3.jpg">
     </div>
   </section>
 
@@ -204,292 +151,4 @@
   </footer>
 
 </body>
-</html>  align-items: center;
-  justify-content: center;
-}
-
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.65);
-}
-
-.hero-content {
-  position: relative;
-  text-align: center;
-  z-index: 2;
-}
-
-.hero h1 {
-  font-size: 46px;
-  letter-spacing: 4px;
-}
-
-.hero p {
-  margin-top: 10px;
-  opacity: 0.9;
-}
-
-/* ===== SECTIONS ===== */
-section {
-  padding: 70px 20px;
-  max-width: 1100px;
-  margin: auto;
-}
-
-h2 {
-  text-align: center;
-  font-size: 30px;
-  margin-bottom: 40px;
-  position: relative;
-}
-
-h2::after {
-  content: "";
-  width: 70px;
-  height: 3px;
-  background: #ffffff;
-  display: block;
-  margin: 12px auto 0;
-}
-
-/* ===== ABOUT ===== */
-.about p {
-  text-align: center;
-  max-width: 750px;
-  margin: auto;
-  font-size: 16px;
-  opacity: 0.95;
-}
-
-/* ===== SERVICES ===== */
-.services {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 25px;
-}
-
-.service-box {
-  background: linear-gradient(180deg, #1c1c1c, #111111);
-  padding: 30px 20px;
-  border-radius: 12px;
-  text-align: center;
-  border: 1px solid #2a2a2a;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.service-box:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 40px rgba(0,0,0,0.7);
-}
-
-/* ===== GALLERY ===== */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 15px;
-}
-
-.gallery img {
-  width: 100%;
-  height: 260px;
-  object-fit: cover;
-  border-radius: 14px;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.gallery img:hover {
-  transform: scale(1.08);
-  box-shadow: 0 15px 40px rgba(0,0,0,0.8);
-}
-
-/* ===== CONTACT ===== */
-.contact {
-  text-align: center;
-  background: linear-gradient(180deg, #0d0d0d, #050505);
-  border-top: 1px solid #222;
-  border-bottom: 1px solid #222;
-}
-
-.contact p {
-  margin-bottom: 15px;
-}
-
-.btn {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 15px 38px;
-  background: #ffffff;
-  color: #000000;
-  text-decoration:    letter-spacing: 3px;
-    margin-bottom: 10px;
-  }
-
-  header p {
-    font-size: 15px;
-    opacity: 0.85;
-  }
-
-  section {
-    padding: 60px 20px;
-    max-width: 1000px;
-    margin: auto;
-  }
-
-  h2 {
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 28px;
-    letter-spacing: 1px;
-    position: relative;
-  }
-
-  h2::after {
-    content: '';
-    display: block;
-    width: 60px;
-    height: 3px;
-    background: #ffffff;
-    margin: 12px auto 0;
-    opacity: 0.8;
-  }
-
-  .about p {
-    text-align: center;
-    max-width: 720px;
-    margin: auto;
-    font-size: 16px;
-    opacity: 0.95;
-  }
-
-  .services {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 24px;
-    margin-top: 30px;
-  }
-
-  .service-box {
-    background: linear-gradient(180deg, #1c1c1c, #121212);
-    padding: 30px 20px;
-    border-radius: 10px;
-    text-align: center;
-    border: 1px solid #2a2a2a;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-  }
-
-  .service-box:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
-  }
-
-  .service-box h3 {
-    margin-bottom: 10px;
-    font-size: 18px;
-    letter-spacing: 0.5px;
-  }
-
-  .contact {
-    text-align: center;
-    background: linear-gradient(180deg, #0d0d0d, #050505);
-    border-top: 1px solid #222;
-    border-bottom: 1px solid #222;
-  }
-
-  .contact p {
-    margin-bottom: 15px;
-    font-size: 15px;
-    opacity: 0.95;
-  }
-
-  .btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 15px 36px;
-    background: #ffffff;
-    color: #000000;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 40px;
-    transition: all 0.3s ease;
-  }
-
-  .btn:hover {
-    background: #dddddd;
-    transform: scale(1.05);
-  }
-
-  footer {
-    text-align: center;
-    padding: 25px;
-    background: #000000;
-    font-size: 13px;
-    opacity: 0.7;
-  }
-    </style>
-</head>
-
-<body>
-
-  <header>
-    <h1>GLORIOUS CUTZ</h1>
-    <p>Est. 2024</p>
-    <p>Willingness to serve good cuts and fresh style</p>
-  </header>
-
-  <section class="about">
-    <h2>About Us</h2>
-    <p>
-      Glorious Cutz is a local barber shop dedicated to delivering clean,
-      fresh, and quality haircuts. We focus on precision, style, and customer
-      satisfaction — every cut matters.
-    </p>
-  </section>
-
-  <section>
-    <h2>Services</h2>
-    <div class="services">
-      <div class="service-box">
-        <h3>Haircut</h3>
-        <p>Clean and classic cuts for all styles</p>
-      </div>
-      <div class="service-box">
-        <h3>Fade / Taper</h3>
-        <p>Sharp fades and smooth tapers</p>
-      </div>
-      <div class="service-box">
-        <h3>Beard Trim</h3>
-        <p>Neat and clean beard shaping</p>
-      </div>
-      <div class="service-box">
-        <h3>Kids Cut</h3>
-        <p>Fresh and comfortable cuts for kids</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="contact">
-    <h2>Visit & Contact</h2>
-    <p>
-      📍 B40 L16 P3, Villa De Calamba<br/>
-      Near City Hall, Calamba City<br/>
-      Laguna, Philippines 4027
-    </p>
-
-    <p>📧 gimorodale@gmail.com</p>
-
-    <a class="btn" href="https://m.facebook.com/profile.php?id=61563975598992" target="_blank">
-  Message on Facebook
-    </a>
-  </section>
-
-  <footer>
-    © 2024 Glorious Cutz Barber Shop
-  </footer>
-
-</body>
 </html>
-
-
-
-
