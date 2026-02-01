@@ -5,112 +5,141 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Glorious Cutz | Barber Shop</title>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, Helvetica, sans-serif;
-    }
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', Helvetica, sans-serif;
+  }
 
-    body {
-      background-color: #0f0f0f;
-      color: #ffffff;
-      line-height: 1.6;
-    }
+  body {
+    background:
+      radial-gradient(circle at top, #1a1a1a 0%, #0a0a0a 60%, #000000 100%);
+    color: #ffffff;
+    line-height: 1.6;
+  }
 
-    header {
-      text-align: center;
-      padding: 60px 20px;
-      background: linear-gradient(180deg, #000000, #111111);
-    }
+  header {
+    text-align: center;
+    padding: 80px 20px;
+    background:
+      linear-gradient(
+        180deg,
+        rgba(0,0,0,0.9),
+        rgba(15,15,15,0.95)
+      );
+    border-bottom: 1px solid #222;
+  }
 
-    header h1 {
-      font-size: 42px;
-      letter-spacing: 2px;
-      margin-bottom: 10px;
-    }
+  header h1 {
+    font-size: 44px;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+  }
 
-    header p {
-      font-size: 16px;
-      opacity: 0.9;
-    }
+  header p {
+    font-size: 15px;
+    opacity: 0.85;
+  }
 
-    section {
-      padding: 50px 20px;
-      max-width: 900px;
-      margin: auto;
-    }
+  section {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: auto;
+  }
 
-    h2 {
-      text-align: center;
-      margin-bottom: 30px;
-      font-size: 28px;
-      letter-spacing: 1px;
-    }
+  h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 28px;
+    letter-spacing: 1px;
+    position: relative;
+  }
 
-    .about p {
-      text-align: center;
-      max-width: 700px;
-      margin: auto;
-      font-size: 16px;
-      opacity: 0.95;
-    }
+  h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #ffffff;
+    margin: 12px auto 0;
+    opacity: 0.8;
+  }
 
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-      margin-top: 30px;
-    }
+  .about p {
+    text-align: center;
+    max-width: 720px;
+    margin: auto;
+    font-size: 16px;
+    opacity: 0.95;
+  }
 
-    .service-box {
-      background: #1a1a1a;
-      padding: 25px;
-      border-radius: 8px;
-      text-align: center;
-      border: 1px solid #2a2a2a;
-    }
+  .services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+    margin-top: 30px;
+  }
 
-    .service-box h3 {
-      margin-bottom: 10px;
-      font-size: 18px;
-    }
+  .service-box {
+    background: linear-gradient(180deg, #1c1c1c, #121212);
+    padding: 30px 20px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid #2a2a2a;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
 
-    .contact {
-      text-align: center;
-    }
+  .service-box:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  }
 
-    .contact p {
-      margin-bottom: 15px;
-      font-size: 15px;
-      opacity: 0.95;
-    }
+  .service-box h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+  }
 
-    .btn {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 14px 30px;
-      background: #ffffff;
-      color: #000000;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 30px;
-      transition: 0.3s ease;
-    }
+  .contact {
+    text-align: center;
+    background: linear-gradient(180deg, #0d0d0d, #050505);
+    border-top: 1px solid #222;
+    border-bottom: 1px solid #222;
+  }
 
-    .btn:hover {
-      background: #dddddd;
-    }
+  .contact p {
+    margin-bottom: 15px;
+    font-size: 15px;
+    opacity: 0.95;
+  }
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #000000;
-      font-size: 13px;
-      opacity: 0.7;
-    }
-  </style>
+  .btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 36px;
+    background: #ffffff;
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 40px;
+    transition: all 0.3s ease;
+  }
+
+  .btn:hover {
+    background: #dddddd;
+    transform: scale(1.05);
+  }
+
+  footer {
+    text-align: center;
+    padding: 25px;
+    background: #000000;
+    font-size: 13px;
+    opacity: 0.7;
+  }
+    </style>
 </head>
 
 <body>
@@ -173,4 +202,5 @@
 
 </body>
 </html>
+
 
